@@ -1,18 +1,35 @@
-import React, { Component } from 'react'
+import React from "react";
 
-export class Form extends Component {
-    render() {
-        return (
-            <div className="container">
-                <h1 className="title">Type your movie title below</h1>
-                <form className="form">
-                    <label for="query" className="label">welcome</label>
-                    <input className="search" placeholder="search movie here" type="text" name="query"/>
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-        )
-    }
+function Form(props) {
+  return (
+    <div className="container">
+      <h1 className="title">Type your movie title below</h1>
+      <form className="form">
+        <label htmlFor="query" className="label">
+          welcome
+        </label>
+        <input
+          className="search"
+          placeholder="search movie here"
+          type="text"
+          name="query"
+        />
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            props.getMovie();
+          }}
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+      <div className="card-list">
+        <ol>
+          <img src="" alt="" />
+        </ol>
+      </div>
+    </div>
+  );
 }
-
-export default Form
+export default Form;
