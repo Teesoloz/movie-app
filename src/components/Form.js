@@ -24,11 +24,6 @@ function Form(props) {
           Search
         </button>
       </form>
-      <div className="card-list">
-        <ol>
-          <img src="" alt="" />
-        </ol>
-      </div>
     </div>
   );
 }
