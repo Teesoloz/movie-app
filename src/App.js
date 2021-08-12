@@ -1,6 +1,7 @@
 import "./App.css";
 import Moviecard from "./components/MovieCard";
 import Form from "./components/Form";
+import Footer from "./components/Footer";
 import React, { useState } from "react";
 
 function App() {
@@ -16,11 +17,12 @@ function App() {
     <div>
       <Form getMovie={getMovie} />
       <h1>Movie List</h1>
-      <ul>
+      <div class="container">
         {movies.map((movie, index) => (
           <Moviecard key={index} movie={movie} />
         ))}
-      </ul>
+      </div>
+      <Footer/>
     </div>
   );
 }
