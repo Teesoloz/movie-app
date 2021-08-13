@@ -17,7 +17,7 @@ function App() {
     <div>
       <Form getMovie={getMovie} />
       <h1 className="heading">Movie List</h1>
-      <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div className="row row-cols-1 row-cols-md-6 g-4">
         {movies.map((movie, index) => (
           <Moviecard key={index} movie={movie} />
         ))}

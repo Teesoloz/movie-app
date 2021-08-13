@@ -6,18 +6,15 @@ function Moviecard(props) {
     borderRadius: "5px",
   };
 
-  console.log(props.movie.show.image.medium);
+  console.log(props.movie.show);
 
   return (
-    <div class="card" style={{style}}>
+    <div class="card" style={{ style }}>
       <img src={props.movie.show.image.medium} class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{props.movie.show.name}</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-primary">
+        <p class="card-text">{props.movie.show.summary}</p>
+        <a href={props.movie.show.url} className="btn btn-primary">
           Watch
         </a>
       </div>

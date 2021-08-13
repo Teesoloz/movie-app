@@ -3,15 +3,21 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   position: relative;
   min-height: 100%;
+  max-width: 100%;
 }
 
 body {
   margin: 20px 0 100px;
   padding: 0;
   text-align: center;
+  overflow-x: hidden;
 }
 
 footer {
@@ -32,6 +38,7 @@ footer {
 }
 
 .search {
+  padding: 5px;
   border-radius: 0.5em;
   margin-right: 20px;
   font-family: "Courier New", Courier, monospace;
