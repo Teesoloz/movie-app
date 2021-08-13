@@ -1,19 +1,25 @@
 import React from "react";
 
 function Moviecard(props) {
-  const style = { height: "50rem", wordWrap:true, width: "18rem", margin:"2rem",  padding:"2rem", borderRadius:"10px" };
-  console.log(props.movie.show.summary);
+  const style = {
+    width: "18rem",
+    borderRadius: "5px",
+  };
+
+  console.log(props.movie.show.image.medium);
+
   return (
-    <div>
-      <div class="card" style={style}>
-        <img
-          src={props.movie.show.image.medium === null? "":props.movie.show.image.medium}
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          {props.movie.show.summary && props.movie.show.summary}
-        </div>
+    <div class="card" style={{style}}>
+      <img src={props.movie.show.image.medium} class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{props.movie.show.name}</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">
+          Watch
+        </a>
       </div>
     </div>
   );
